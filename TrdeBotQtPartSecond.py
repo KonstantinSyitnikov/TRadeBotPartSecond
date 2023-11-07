@@ -6,8 +6,11 @@ python3 -m venv .
 pyuic5 -x NAMEPROJECT.ui -o NAMEPROJECT.py
 """
 import sys
+sys.path.append('WEBSocketPy/#TradeBOTWEBSocket.py')
+from WEBSocketPy.TradeBOTWEBSocket import SocketConn
 from PyQt5 import QtWidgets,QtCore, uic
 from PyQt5.QtWidgets import QFileDialog,QWidget, QGridLayout, QMainWindow,QPushButton,QTextEdit
+
 
 import math
 from PyQt5.QtCore import Qt
@@ -17,7 +20,9 @@ from PyQt5.QtCore import Qt
 
 
 class Ui_TradeBot(object):
+    
     def setupUi(self, TradeBot):
+        
         TradeBot.setObjectName("TradeBot")
         TradeBot.resize(741, 589)
         TradeBot.setStyleSheet("background-color: rgb(36, 31, 49);")

@@ -4,7 +4,7 @@ source bin/activate
 pip install pyqt5-tools
 pip install pyqt5
 python3 -m venv .
-
+pyuic5 -x NAMEPROJECT.ui -o NAMEPROJECT.py
 """
 import sys
 from PyQt5 import QtWidgets,QtCore, uic
